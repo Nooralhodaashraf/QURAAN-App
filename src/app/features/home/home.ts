@@ -12,18 +12,7 @@ import { LatestBlog } from './components/latest-blog/latest-blog';
 
 @Component({
   selector: 'app-home',
-  imports: [
-    HeroSec,
-    WelcomeSec,
-    CourseSec,
-    Female,
-    WhyUs,
-    Feedback,
-    AboutUs,
-    AbouteUs,
-    Conact,
-    LatestBlog,
-  ],
+  imports: [HeroSec, WelcomeSec, CourseSec, Female, WhyUs, Feedback, AbouteUs, Conact, LatestBlog],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
