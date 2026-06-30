@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { CoursesId } from '../../core/model/courses';
 
 @Component({
   selector: 'app-navbar',
@@ -8,6 +10,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './navbar.css',
 })
 export class Navbar {
+  private readonly httpClient = inject(HttpClient);
+
   isMenuOpen = false;
 
   toggleMenu() {
