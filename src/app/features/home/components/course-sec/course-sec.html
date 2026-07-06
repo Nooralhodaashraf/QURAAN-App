@@ -72,41 +72,45 @@
       </svg>
     </div>
     <div class="grid grid-cols-1 gap-5 md:grid-cols-3 px-[50px]">
-      @for (course of courseList; track course.id) {
-        <div class="flex items-center justify-center">
-          <!-- الكارد الرئيسية -->
-          <div
-            class="max-w-sm w-full bg-white min-h-133 shadow-2xl rounded-[80px_20px_80px_20px] py-8 px-6 flex md:py-8 md:px-5 flex-col items-center text-center"
-          >
-            <!-- منطقة الهيدر (التصميم الهندسي) -->
+      @if (courseList.length > 0) {
+        @for (course of courseList; track course.id) {
+          <div class="flex items-center justify-center">
+            <!-- الكارد الرئيسية -->
             <div
-              class="relative w-full h-75 rounded-[34.53px_10.62px_34.53px_10.62px] overflow-hidden mb-6 bg-[url('/imgs/Pic.png')] py-28 bg-cover bg-center bg-no-repeat"
+              class="max-w-sm w-full bg-white min-h-133 shadow-2xl rounded-[80px_20px_80px_20px] py-8 px-6 flex md:py-8 md:px-5 flex-col items-center text-center"
             >
+              <!-- منطقة الهيدر (التصميم الهندسي) -->
               <div
-                class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-20 mx-4 rounded-3xl flex flex-col items-center justify-center z-10"
+                class="relative w-full h-75 rounded-[34.53px_10.62px_34.53px_10.62px] overflow-hidden mb-6 bg-[url('/imgs/Pic.png')] py-28 bg-cover bg-center bg-no-repeat"
               >
-                <h2 class="text-[#1a1c2e] font-bold text-xl leading-tight"></h2>
-                <span class="text-marks font-medium uppercase tracking-wider text-sm">{{
-                  course.title.rendered
-                }}</span>
+                <div
+                  class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-20 mx-4 rounded-3xl flex flex-col items-center justify-center z-10"
+                >
+                  <h2 class="text-[#1a1c2e] font-bold text-xl leading-tight"></h2>
+                  <span class="text-marks font-medium uppercase tracking-wider text-sm">{{
+                    course.title.rendered
+                  }}</span>
+                </div>
               </div>
-            </div>
 
-            <!-- النصوص -->
-            <div class="space-y-3 mb-8">
-              <p class="text-gray-700 text-lg leading-relaxed px-4">
-                {{ course.yoast_head_json.description.split(' ').slice(0, 10).join(' ') + '...' }}
-              </p>
-            </div>
+              <!-- النصوص -->
+              <div class="space-y-3 mb-8">
+                <p class="text-gray-700 text-lg leading-relaxed px-4">
+                  {{ course.yoast_head_json.description.split(' ').slice(0, 10).join(' ') + '...' }}
+                </p>
+              </div>
 
-            <!-- زر الاستدعاء (CTA) -->
-            <button
-              class="w-full bg-[#5cb85c] hover:bg-[#337c33] text-white rounded-[40px_10px_40px_10px] font-semibold py-5 px-12 text-xl transition-colors duration-300 shadow-lg"
-            >
-              Start Free Trial
-            </button>
+              <!-- زر الاستدعاء (CTA) -->
+              <button
+                class="w-full bg-[#5cb85c] hover:bg-[#337c33] text-white rounded-[40px_10px_40px_10px] font-semibold py-5 px-12 text-xl transition-colors duration-300 shadow-lg"
+              >
+                Start Free Trial
+              </button>
+            </div>
           </div>
-        </div>
+        }
+      } @else {
+        <div><p>sorry</p></div>
       }
     </div>
     <!-- !swipper -->
@@ -153,36 +157,42 @@
         </svg>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 p-[50px]">
-        <div class="flex items-center justify-center">
-          <!-- الكارد الرئيسية -->
-          <div
-            class="max-w-sm w-full bg-white min-h-133 shadow-2xl rounded-[80px_20px_80px_20px] py-8 px-6 flex md:p-8 flex-col items-center text-center"
-          >
-            <!-- منطقة الهيدر (التصميم الهندسي) -->
+        @for (course of courseList; track course.id) {
+          <div class="flex items-center justify-center">
+            <!-- الكارد الرئيسية -->
             <div
-              class="relative w-full h-75 rounded-[37.53px_10.62px_37.53px_10.62px] overflow-hidden mb-6 bg-[url('/imgs/Pic.png')] py-28 bg-cover bg-center bg-no-repeat"
+              class="max-w-sm w-full bg-white min-h-133 shadow-2xl rounded-[80px_20px_80px_20px] py-8 px-6 flex md:py-8 md:px-5 flex-col items-center text-center"
             >
+              <!-- منطقة الهيدر (التصميم الهندسي) -->
               <div
-                class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-20 mx-4 rounded-3xl flex flex-col items-center justify-center z-10"
+                class="relative w-full h-75 rounded-[34.53px_10.62px_34.53px_10.62px] overflow-hidden mb-6 bg-[url('/imgs/Pic.png')] py-28 bg-cover bg-center bg-no-repeat"
               >
-                <h2 class="text-[#1a1c2e] font-bold text-xl leading-tight">course name</h2>
-                <span class="text-marks font-medium uppercase tracking-wider text-sm">Course</span>
+                <div
+                  class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-20 mx-4 rounded-3xl flex flex-col items-center justify-center z-10"
+                >
+                  <h2 class="text-[#1a1c2e] font-bold text-xl leading-tight"></h2>
+                  <span class="text-marks font-medium uppercase tracking-wider text-sm">{{
+                    course.title.rendered
+                  }}</span>
+                </div>
               </div>
-            </div>
 
-            <!-- النصوص -->
-            <div class="space-y-3 mb-8">
-              <p class="text-gray-700 text-lg leading-relaxed px-4">course desc.</p>
-            </div>
+              <!-- النصوص -->
+              <div class="space-y-3 mb-8">
+                <p class="text-gray-700 text-lg leading-relaxed px-4">
+                  {{ course.yoast_head_json.description.split(' ').slice(0, 10).join(' ') + '...' }}
+                </p>
+              </div>
 
-            <!-- زر الاستدعاء (CTA) -->
-            <button
-              class="w-full bg-[#5cb85c] hover:bg-[#337c33] text-white rounded-[40px_10px_40px_10px] font-semibold py-5 px-12 text-xl transition-colors duration-300 shadow-lg"
-            >
-              Start Free Trial
-            </button>
+              <!-- زر الاستدعاء (CTA) -->
+              <button
+                class="w-full bg-[#5cb85c] hover:bg-[#337c33] text-white rounded-[40px_10px_40px_10px] font-semibold py-5 px-12 text-xl transition-colors duration-300 shadow-lg"
+              >
+                Start Free Trial
+              </button>
+            </div>
           </div>
-        </div>
+        }
       </div>
     </div>
   </div>
