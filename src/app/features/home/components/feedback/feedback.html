@@ -57,27 +57,33 @@
       </div>
 
       <!-- Image Card (أعلى من النص) -->
-      <div
-        class="relative md:-mt-10 lg:-mt-16 bg-[url('/imgs/Frame.png')] md:right-15 w-87.5 h-50 md:h-[274.1039123535156px] md:w-[487.9878845214844px] flex flex-col bg-cover bg-center bg-no-repeat items-center"
-      >
-        <!-- Frame Wrapper -->
-        <div class="relative w-[320px]">
-          <!-- Wavy Frame Image -->
+      @if (videoLink == '') {
+        <div
+          class="relative md:-mt-10 lg:-mt-16 bg-[url('/imgs/Frame.png')] md:right-15 w-87.5 h-50 md:h-[274.1039123535156px] md:w-[487.9878845214844px] flex flex-col bg-cover bg-center bg-no-repeat items-center"
+        >
+          <!-- Frame Wrapper -->
+          <div class="relative w-[320px]">
+            <!-- Wavy Frame Image -->
 
-          <!-- Content Inside Frame -->
-          <div class="absolute inset-0 p-6 z-20">
-            <!-- Pattern -->
-            <div class="absolute inset-0 opacity-10"></div>
+            <!-- Content Inside Frame -->
+            <div class="absolute inset-0 p-6 z-20">
+              <!-- Pattern -->
+              <div class="absolute inset-0 opacity-10"></div>
 
-            <!-- Inner Image Box -->
-            <div class="relative flex items-center justify-center h-full">
-              <div class="p rounded-2xl bg-linear-to-br from-yellow-400 to-yellow-600">
-                <div class="bg-white p-2 rounded-2xl">
-                  <div class="relative">
-                    <!-- Play Button -->
-                    <div class="absolute inset-0 top-22 md:top-25 flex items-center justify-center">
-                      <div class="bg-white rounded-full border-[3px] border-primary p-3 shadow-md">
-                        <i class="fa-solid fa-play text-primary"></i>
+              <!-- Inner Image Box -->
+              <div class="relative flex items-center justify-center h-full">
+                <div class="p rounded-2xl bg-linear-to-br from-yellow-400 to-yellow-600">
+                  <div class="bg-white p-2 rounded-2xl">
+                    <div class="relative">
+                      <!-- Play Button -->
+                      <div
+                        class="absolute inset-0 top-22 md:top-25 flex items-center justify-center"
+                      >
+                        <div
+                          class="bg-white rounded-full border-[3px] border-primary p-3 shadow-md"
+                        >
+                          <i class="fa-solid fa-play text-primary"></i>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -85,42 +91,50 @@
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Floating Icons -->
+          <!-- Floating Icons -->
+          <div
+            class="absolute top-8 left-23 md:top-11 md:left-30 text-xl md:text-2xl bg-red-500 text-white p-1 md:p-2 rounded-full shadow-lg"
+          >
+            <i class="fa-solid fa-heart rotate-12"></i>
+          </div>
+
+          <div
+            class="absolute md:top-10 md:right-36 right-27 top-6.75 text-[18px] md:text-2xl bg-blue-500 text-white p-1 md:p-2 rounded-full shadow-lg"
+          >
+            <i class="fa-solid fa-thumbs-up rotate-12"></i>
+          </div>
+
+          <div
+            class="absolute bottom-6 md:bottom-11 left-25 md:left-33 text-[18px] md:text-2xl bg-blue-500 text-white p-2 rounded-full shadow-lg"
+          >
+            <i class="fa-solid fa-thumbs-up -rotate-20"></i>
+          </div>
+
+          <div
+            class="absolute bottom-6 md:bottom-9 md:right-36 right-27 text-[18px] md:text-2xl bg-red-500 text-white p-1.5 md:p-2 rounded-full shadow-lg"
+          >
+            <i class="fa-solid fa-heart rotate-22"></i>
+          </div>
+
+          <!-- Stars -->
+          <div
+            class="flex justify-center gap-10.5 mt-6 absolute -bottom-10 text-yellow-400 text-xl"
+          >
+            <i class="fa-solid text-3xl fa-star"></i>
+            <i class="fa-solid text-3xl fa-star"></i>
+            <i class="fa-solid text-3xl fa-star"></i>
+            <i class="fa-solid text-3xl fa-star"></i>
+            <i class="fa-solid text-3xl fa-star"></i>
+          </div>
+        </div>
+      } @else {
         <div
-          class="absolute top-8 left-23 md:top-11 md:left-30 text-xl md:text-2xl bg-red-500 text-white p-1 md:p-2 rounded-full shadow-lg"
+          class="w-full max-w-[1151px] mx-auto aspect-video border-2 border-marks rounded-3xl overflow-hidden"
         >
-          <i class="fa-solid fa-heart rotate-12"></i>
+          <video src="" class="w-full h-full"></video>
         </div>
-
-        <div
-          class="absolute md:top-10 md:right-36 right-27 top-6.75 text-[18px] md:text-2xl bg-blue-500 text-white p-1 md:p-2 rounded-full shadow-lg"
-        >
-          <i class="fa-solid fa-thumbs-up rotate-12"></i>
-        </div>
-
-        <div
-          class="absolute bottom-6 md:bottom-11 left-25 md:left-33 text-[18px] md:text-2xl bg-blue-500 text-white p-2 rounded-full shadow-lg"
-        >
-          <i class="fa-solid fa-thumbs-up -rotate-20"></i>
-        </div>
-
-        <div
-          class="absolute bottom-6 md:bottom-9 md:right-36 right-27 text-[18px] md:text-2xl bg-red-500 text-white p-1.5 md:p-2 rounded-full shadow-lg"
-        >
-          <i class="fa-solid fa-heart rotate-22"></i>
-        </div>
-
-        <!-- Stars -->
-        <div class="flex justify-center gap-10.5 mt-6 absolute -bottom-10 text-yellow-400 text-xl">
-          <i class="fa-solid text-3xl fa-star"></i>
-          <i class="fa-solid text-3xl fa-star"></i>
-          <i class="fa-solid text-3xl fa-star"></i>
-          <i class="fa-solid text-3xl fa-star"></i>
-          <i class="fa-solid text-3xl fa-star"></i>
-        </div>
-      </div>
+      }
     </div>
     <div
       class="text-black md:hidden rounded-2xl md:w-[705.55712890625px] md:h-112 md:py-7 py-16.5 px-10 text-left md:shadow-lg"
@@ -155,7 +169,7 @@
     <!-- Button -->
     <div class="md:mt-12 mt-5 w-full">
       <button
-        class="bg-secondary w-[188px] leading-[12px] hover:bg-green-600 text-white px-8 py-3 h-[36.414363861083984px] md:w-87 rounded-[15.25px_5px_15.25px_5px] py- shadow-lg transition"
+        class="bg-secondary w-47 leading-[12px] hover:bg-green-600 text-white px-8 py-3 h-[36.414363861083984px] md:w-[348px] rounded-[24px_8px_24px_8px] py- shadow-lg transition"
       >
         <!--! الارقام بتطلع نتايج مختلفة عن الشكل بتاع الديزاين  -->
         Get Free Trial

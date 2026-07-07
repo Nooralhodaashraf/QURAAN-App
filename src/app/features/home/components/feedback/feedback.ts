@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './feedback.html',
   styleUrl: './feedback.css',
 })
-export class Feedback {}
+export class Feedback {
+  videoLink: string = '';
+}

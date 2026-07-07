@@ -47,4 +47,8 @@ export class CourseSec implements OnInit {
       error: (err) => console.log(err),
     });
   }
+
+  reload() {
+    window.location.reload();
+  }
 }

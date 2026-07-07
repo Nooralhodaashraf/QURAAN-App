@@ -1,11 +1,11 @@
 <!-- about-us.component.html -->
-<section class="relative h-125 flex items-center justify-center overflow-hidden">
+<section
+  class="relative h-130 flex items-center bg-[url('/imgs/aboutUs.png')] justify-center overflow-hidden"
+>
   <!-- Background Image -->
-  <div
-    class="absolute inset-0 pt-8 -top-35 bg-center bg-[url('/imgs/Group82.png')] bg-no-repeat bg-cover"
-  >
+  <div class="absolute inset-0 pt-8 -top-35 bg-center bg-primary/80 bg-no-repeat bg-cover">
     <div class="relative z-10 text-center px-4 pt-40 pb-40">
-      <h1 class="text-white text-[26px] md:text-[60px] font-semibold md:font-bold mb-8">
+      <h1 class="text-white text-[26px] lg:text-[60px] font-semibold lg:font-bold mb-8">
         About Us
       </h1>
 
@@ -24,7 +24,7 @@
       </div>
     </div>
     <svg
-      class="relative hidden lg:block w-full h-30"
+      class="relative w-full h-40"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1440 320"
       preserveAspectRatio="none"
@@ -38,12 +38,12 @@
   </div>
 </section>
 <section
-  class="relative z-10 max-w-7xl mb-13 mx-auto px-4 md:px-0 py-12 md:py-20 grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-2 items-center"
+  class="relative z-10 max-w-7xl mb-13 mx-auto px-4 lg:px-[50px] py-12 lg:py-20 grid grid-cols-1 lg:grid-cols-2 lg:gap-15 gap-2 items-center"
 >
-  <div class="col-span-1 text-center md:text-left p-4">
-    <h2 class="font-semibold text-[20px] md:text-[36px]">About Quran For All School</h2>
+  <div class="col-span-1 text-center lg:text-left p-4">
+    <h2 class="font-semibold text-[20px] lg:text-[36px]">About Quran For All School</h2>
 
-    <div class="items-center w-full flex justify-center md:block">
+    <div class="items-center w-full flex justify-center lg:block">
       <svg
         width="200"
         height="20"
@@ -62,13 +62,13 @@
         />
       </svg>
     </div>
-    <div class="w-full flex justify-center md:hidden">
+    <div class="w-full flex justify-center lg:hidden">
       <p class="text-[14px] font-normal h-10.5 w-73.75">
         Quran For All School helps students worldwide learn Quran and Islamic studies through
         interactive online classes with certified teachers.
       </p>
     </div>
-    <div class="hidden md:block">
+    <div class="hidden lg:block">
       <ul class="list-none px-4 text-left">
         <li class="text-[20px] py-2 leading-12.5">
           Quran For All School is an online educational platform that teaches the Holy Quran and the
@@ -83,13 +83,13 @@
         </li>
       </ul>
       <span
-        class="md:px-15 md:hover:translate-x-44 w-67.5 duration-300 cursor-pointer md:font-semibold bg-secondary text-white px-6 py-2 rounded-[5px_10px_5px_10px] font-medium h-9"
+        class="lg:px-15 lg:hover:translate-x-44 w-67.5 duration-300 cursor-pointer lg:font-semibold bg-secondary text-white px-6 py-2 rounded-[24px_8px_24px_8px] font-medium h-15 ml-7"
         routerLink="/ContactUs"
         >Contact Us
       </span>
     </div>
   </div>
-  <div class="h-full col-span-1 items-center flex">
+  <div class="h-full py-8 col-span-1 justify-center items-center flex">
     <svg
       width="400"
       height="490"
@@ -116,13 +116,13 @@
       </defs>
     </svg>
   </div>
-  <div class="md:hidden text-center">
+  <div class="lg:hidden text-center">
     <p class="px-5 py-4 text-center">
       Quran For All School helps students worldwide learn Quran and Islamic studies through
       interactive online classes with certified teachers.
     </p>
     <span
-      class="md:px-5 md:hover:translate-x-44 duration-300 cursor-pointer md:font-semibold bg-secondary text-white px-6 py-2 rounded-[5px_10px_5px_10px] font-medium h-9 w-33"
+      class="lg:px-5 lg:hover:translate-x-44 duration-300 cursor-pointer lg:font-semibold bg-secondary text-white px-6 py-2 rounded-[5px_10px_5px_10px] font-medium h-9 w-33"
       routerLink="/Courses"
       >Start Learning
     </span>
