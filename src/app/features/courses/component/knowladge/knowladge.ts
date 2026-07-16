@@ -1,15 +1,15 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Component, OnInit, inject } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit } from '@angular/core';
 import { Courses } from '../../../../core/service/courses';
 import { CoursesId, CoursesInt } from '../../../../core/model/courses';
 
 @Component({
-  selector: 'app-studies',
+  selector: 'app-knowladge',
   imports: [],
-  templateUrl: './studies.html',
-  styleUrl: './studies.css',
+  templateUrl: './knowladge.html',
+  styleUrl: './knowladge.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class Studies implements OnInit {
+export class Knowladge {
   private readonly courses = inject(Courses);
 
   idList: CoursesId[] = [];

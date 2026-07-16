@@ -1,5 +1,5 @@
 <section class="py-50 relative overflow-hidden">
-  <div class="absolute md:-top-2.5 pt-6 md:left-[35%] right--[5%] -top-5">
+  <div class="absolute md:-top-2.5 pt-6 md:left-[30%] right--[5%] -top-5">
     <svg
       width="408"
       height="351"
@@ -28,10 +28,10 @@
   </div>
 
   <div
-    class="md:bg-[url('/imgs/ShabeBG.png')] bg-[url('/imgs/Union2.png')] bg-no-repeat bg-cover bg-center py-45 md:py-75.5"
+    class="lg:bg-[url('/imgs/ShabeBG.png')] bg-[url('/imgs/Union2.png')] bg-no-repeat bg-cover bg-center py-45 lg:py-75.5"
   >
-    <div class="md:py-15 py-0 flex flex-col md:flex-row gap-x-3 items-center justify-center">
-      <div class="hidden md:block">
+    <div class="lg:py-15 py-0 flex flex-col lg:flex-row gap-x-3 items-center justify-center">
+      <div class="hidden lg:block">
         <svg
           width="200"
           height="20"
@@ -50,7 +50,7 @@
           />
         </svg>
       </div>
-      <h2 class="font-semibold md:text-[36px] text-2xl text-center">
+      <h2 class="font-semibold lg:text-[36px] text-2xl text-center">
         Popular Courses for Children
       </h2>
       <svg
@@ -71,13 +71,13 @@
         />
       </svg>
     </div>
-    <div class="grid grid-cols-1 gap-5 md:grid-cols-3 py-7 px-[50px]">
+    <div class="grid grid-cols-1 gap-5 lg:grid-cols-3 py-7 px-[50px]">
       @if (courseList.length > 0) {
         @for (course of courseList; track course.id) {
           <div class="flex items-center justify-center">
             <!-- الكارد الرئيسية -->
             <div
-              class="max-w-sm w-full bg-white min-h-133 shadow-2xl rounded-[80px_20px_80px_20px] py-8 px-6 flex md:py-8 md:px-5 flex-col items-center text-center"
+              class="max-w-sm w-full bg-white min-h-133 shadow-2xl rounded-[80px_20px_80px_20px] py-8 px-6 flex lg:py-8 lg:px-5 flex-col items-center text-center"
             >
               <!-- منطقة الهيدر (التصميم الهندسي) -->
               <div
@@ -111,7 +111,7 @@
         }
       } @else {
         <div
-          class="w-full md:col-span-3 max-w-5xl mx-auto p-[6px] rounded-[40px] bg-gradient-to-br from-[#D4A63E] via-[#B78C32] to-pritext-primary shadow-2xl"
+          class="w-full lg:col-span-3 max-w-5xl mx-auto p-[6px] rounded-[40px] bg-gradient-to-br from-[#D4A63E] via-[#B78C32] to-pritext-primary shadow-2xl"
         >
           <div
             class="relative bg-white rounded-[34px] min-h-[420px] flex flex-col items-center justify-center text-center px-6 py-12"
@@ -135,13 +135,13 @@
             </div>
 
             <!-- Title -->
-            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+            <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-4">
               Please Check Your Network
             </h2>
 
             <!-- Description -->
             <p class="px-5 text-gray-500 text-lg leading-8">
-              <span class="hidden md:block"> We couldn't load the content right now.</span>
+              <span class="hidden lg:block"> We couldn't load the content right now.</span>
               <br />
               Please make sure your internet connection is working and try again.
             </p>
@@ -180,8 +180,8 @@
     </div>
     <!-- !swipper -->
     <div>
-      <div class="md:py-15 py-0 flex flex-col md:flex-row gap-x-3 items-center justify-center">
-        <div class="hidden md:block">
+      <div class="lg:py-15 py-0 flex flex-col lg:flex-row gap-x-3 items-center justify-center">
+        <div class="hidden lg:block">
           <svg
             width="200"
             height="20"
@@ -200,7 +200,7 @@
             />
           </svg>
         </div>
-        <h2 class="font-semibold md:text-[36px] text-2xl text-center tex-[18px]">
+        <h2 class="font-semibold lg:text-[36px] text-2xl text-center tex-[18px]">
           Featured Courses
         </h2>
         <svg
@@ -221,13 +221,13 @@
           />
         </svg>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 p-[50px]">
+      <div class="grid grid-cols-1 lg:grid-cols-3 p-[50px]">
         @if (courseList.length > 0) {
           @for (course of courseList; track course.id) {
             <div class="flex items-center justify-center">
               <!-- الكارد الرئيسية -->
               <div
-                class="max-w-sm w-full bg-white min-h-133 shadow-2xl rounded-[80px_20px_80px_20px] py-8 px-6 flex md:py-8 md:px-5 flex-col items-center text-center"
+                class="max-w-sm w-full bg-white min-h-133 shadow-2xl rounded-[80px_20px_80px_20px] py-8 px-6 flex lg:py-8 lg:px-5 flex-col items-center text-center"
               >
                 <!-- منطقة الهيدر (التصميم الهندسي) -->
                 <div
@@ -289,13 +289,13 @@
               </div>
 
               <!-- Title -->
-              <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+              <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-4">
                 Please Check Your Network
               </h2>
 
               <!-- Description -->
               <p class="px-5 text-gray-500 text-lg leading-8">
-                <span class="hidden md:block"> We couldn't load the content right now.</span>
+                <span class="hidden lg:block"> We couldn't load the content right now.</span>
                 <br />
                 Please make sure your internet connection is working and try again.
               </p>
