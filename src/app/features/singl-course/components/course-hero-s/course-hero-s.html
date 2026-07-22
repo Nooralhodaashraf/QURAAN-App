@@ -1,12 +1,3 @@
-<!-- <section class="py-16 lg:py-24">
-  <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-    <!-- Left -->
-<!-- <app-course-hero></app-course-hero> -->
-<!-- Right -->
-<!-- <app-course-request-form></app-course-request-form> -->
-<!-- </div> -->
-<!-- <app-introduction-sec></app-introduction-sec> -->
-<!-- </section> -->
 <section class="overflow-hidden relative">
   <!-- ================= Hero ================= -->
   <div
@@ -14,19 +5,20 @@
   >
     <div class="mx-auto px-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
       <!-- Left -->
-      <div class="text-center px-7 lg:text-left">
-        <h1 class="text-4xl md:text-5xl xl:text-[50px] font-bold text-white leading-tight">
+      <div class="text-center px-5 lg:text-left">
+        <h1 class="text-[20px] md:text-5xl xl:text-[50px] font-bold text-white leading-tight">
           Tajweed Course
         </h1>
 
         <p
-          class="mt-6 text-lg md:text-[30px] font-normal leading-[45px] text-white/90 max-w-xl mx-auto lg:mx-0"
+          class="mt-6 text-lg md:text-[30px] font-normal w-full leading-[18px] md:leading-[45px] text-white/90 max-w-xl mx-auto lg:mx-0"
         >
-          Learn to recite the Quran correctly with proper Tajweed rules
+          Learn to recite the Quran correctly
+          <span class="hidden md:block">with proper Tajweed rules</span>
         </p>
 
         <button
-          class="mt-10 rounded-xl bg-white px-12 py-4 font-semibold text-[#52B44B] transition hover:scale-105"
+          class="mt-10 rounded-[21.21px_7.07px] bg-white md:px-12 md:py-4 px-6 py-2 font-semibold text-secondary transition hover:scale-105"
         >
           Get Free Trial
         </button>
@@ -36,77 +28,156 @@
     </div>
   </div>
 
-  <div class="flex justify-center absolute top-5 right-9 lg:justify-end">
-    <div class="w-full max-w-[470px] rounded-[28px] bg-white p-6 md:p-8 shadow-2xl">
-      <h2 class="text-center text-3xl font-bold text-primary">Request a Course</h2>
+  <div
+    class="flex justify-center mx-auto w-full pt-4 md:pt-30 top-55 items-center absolute lg:top-5 lg:right-9 w-[447px] lg:mt-0 lg:justify-end"
+  >
+    <div class="w-[70%] lg:w-[40%] rounded-[45px_10px] bg-white p-6 md:p-8 shadow-2xl">
+      <h2 class="text-center md:text-3xl text-2xl font-bold text-primary">Request a Course</h2>
 
-      <p class="mt-2 text-center text-sm text-gray-500">
-        Free Trial Class — No Payment Required Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Earum, doloribus nisi. Pariatur tempora blanditiis adipisci eum eos sequi recusandae
-        quibusdam corporis velit cumque doloribus at, repudiandae a rem quidem minima quaerat optio
-        quasi officiis qui consequuntur praesentium, nihil fugiat omnis? Repellendus recusandae
-        tempora nesciunt saepe, illo obcaecati minus nisi a. Hic asperiores cumque, aspernatur id
-        excepturi aliquid deleniti perspiciatis. Porro libero, perspiciatis voluptate animi iure,
-        sequi deserunt numquam quos quam incidunt tempore possimus sapiente atque vel quod, debitis
-        blanditiis. Doloremque, accusantium impedit provident labore cumque atque eveniet ea
-        recusandae rerum itaque placeat amet id, consequuntur fuga qui. Amet minus aut blanditiis
-        vero recusandae, voluptas laborum, sunt voluptatem quos cumque iusto est. Sint sunt iusto
-        fugiat a. Recusandae, odit. Mollitia vero dolor ipsa vel eaque adipisci, dignissimos officia
-        doloremque consectetur labore odit at magnam qui ullam temporibus ipsam quisquam obcaecati
-        eius et fugiat. Accusamus ex adipisci facilis. Sequi facere dignissimos sit repudiandae, at
-        magni voluptas minima aperiam assumenda reiciendis odit ullam rem numquam ex obcaecati
-        reprehenderit eveniet consequuntur, cumque dolores architecto? Explicabo quas, distinctio
-        mollitia velit officia numquam odio quia ex! Delectus provident accusamus assumenda maiores
-        ab corporis placeat ullam cupiditate voluptas. Quia dolor fugit sunt ipsa. Quae, assumenda
-        quod sunt sequi iure nam odit eius. Unde corporis saepe maiores assumenda. Facere qui rem
-        voluptates obcaecati deleniti dolore vel sunt aliquam, sapiente nesciunt optio ab nisi
-        expedita, maxime corrupti culpa ipsam odit accusantium nihil voluptate iusto! Odit ipsa est,
-        eius, inventore at perferendis sed aliquam commodi neque ab expedita molestiae iure
-        praesentium consequatur libero aspernatur tempora rem magnam doloribus reprehenderit eaque
-        blanditiis quod maiores hic. Eum magnam provident vitae perspiciatis cupiditate debitis, id
-        labore, aspernatur obcaecati quam dolore autem totam iusto ducimus adipisci tenetur
-        perferendis maxime delectus beatae accusamus! Adipisci corporis vero dolorem, aliquam atque
-        cum labore reiciendis voluptates reprehenderit praesentium.
+      <p class="mt-2 text-center text-sm text-primary font-semibold text-[15px]">
+        Free Trial Class — No Payment Required
       </p>
 
-      <div class="mt-8 space-y-5">
-        <input
-          type="text"
-          placeholder="Your Name"
-          class="w-full rounded-xl border p-4 outline-none focus:border-green-500"
-        />
+      <div class="px-3 py-[17.5px]">
+        <div>
+          <label for="course" class="mb-2 block text-xl w-full font-normal text-black">
+            Select a course
+          </label>
 
-        <input
-          type="email"
-          placeholder="Email"
-          class="w-full rounded-xl border p-4 outline-none focus:border-green-500"
-        />
+          <select
+            id="course"
+            class="h-[42px] w-full rounded-xl border border-mint border-[3px] bg-white px-4 text-sm text-gray-500 outline-none transition focus:border-[#0A5B45]"
+          >
+            <option selected disabled>Choose a course</option>
+          </select>
+        </div>
 
-        <input
-          type="text"
-          placeholder="WhatsApp"
-          class="w-full rounded-xl border p-4 outline-none focus:border-green-500"
-        />
+        <!-- Name -->
+        <div>
+          <label for="name" class="mb-2 block text-xl w-full font-normal text-black"> Name </label>
 
-        <button class="w-full rounded-xl bg-[#53C153] py-4 font-semibold text-white">
+          <input
+            id="name"
+            type="text"
+            placeholder="Your name"
+            class="h-[42px] w-full rounded-xl border border-mint border-[3px] bg-white px-4 text-sm text-gray-500 outline-none transition focus:border-[#0A5B45]"
+          />
+        </div>
+
+        <!-- Gender -->
+        <div>
+          <label for="gender" class="mb-2 block text-xl w-full font-normal text-black">
+            Gender
+          </label>
+
+          <select
+            id="gender"
+            class="h-[42px] w-full rounded-xl border border-mint border-[3px] bg-white px-4 text-sm text-gray-500 outline-none transition focus:border-[#0A5B45]"
+          >
+            <option selected disabled>Choose the gender</option>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+
+        <!-- Age -->
+        <div>
+          <label for="age" class="mb-2 block text-xl w-full font-normal text-black"> Age </label>
+
+          <input
+            id="age"
+            type="number"
+            placeholder="Your age"
+            class="h-[42px] w-full rounded-xl border border-mint border-[3px] bg-white px-4 text-sm text-gray-500 outline-none transition focus:border-[#0A5B45]"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="mb-2 block text-xl w-full font-normal text-black">
+            Email address
+          </label>
+
+          <input
+            id="email"
+            type="email"
+            placeholder="Your.Email@example.com"
+            class="h-[42px] w-full rounded-xl border border-mint border-[3px] bg-white px-4 text-sm text-gray-500 outline-none transition focus:border-[#0A5B45]"
+          />
+        </div>
+
+        <!-- Country -->
+        <div>
+          <label for="country" class="mb-2 block text-xl w-full font-normal text-black">
+            Country
+          </label>
+
+          <div class="relative">
+            <span class="absolute left-4 top-1/2 -translate-y-1/2"> 🌍 </span>
+
+            <select
+              id="country"
+              class="h-13 w-full rounded-xl border border-[#CFEAE3] bg-white pl-12 pr-4 text-sm text-gray-500 outline-none focus:border-[#0A5B45]"
+            >
+              <option selected disabled>Your country</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- WhatsApp -->
+        <div>
+          <label for="whatsapp" class="mb-2 block text-xl w-full font-normal text-black">
+            WhatsApp
+          </label>
+
+          <input
+            id="whatsapp"
+            type="tel"
+            placeholder="+1 (555) 123-4567"
+            class="h-[42px] w-full rounded-xl border border-mint border-[3px] bg-white px-4 text-sm text-gray-500 outline-none transition focus:border-[#0A5B45]"
+          />
+        </div>
+
+        <!-- Button -->
+        <button
+          type="submit"
+          class="mt-4 h-14 w-full bg-secondary rounded-[21.21px_7.07px] text-lg font-semibold text-white transition hover:bg-[#46AF47]"
+        >
           Get Free Trial
         </button>
       </div>
     </div>
   </div>
   <!-- ================= Introduction ================= -->
+  <section class="lg:pl-10 mx-auto my-6 lg:mx-0 lg:w-[50%] pt-60 lg:py-10 lg:pt-0">
+    <div class="mx-auto px-6">
+      <div class="text-center pt-[600px] lg:pt-4">
+        <h2 class="text-[18px] md:text-[30px] font-bold">An Introduction to Tajweed Course</h2>
 
-  <section class="py-16 lg:py-24">
-    <div class="container mx-auto px-6">
-      <div class="text-center">
-        <h2 class="text-3xl md:text-4xl font-bold">An Introduction to Tajweed Course</h2>
-
-        <div class="mx-auto mt-4 h-[3px] w-32 rounded-full bg-[#AF8E45]"></div>
+        <div class="mx-auto grid justify-center items-center">
+          <svg
+            width="200"
+            height="20"
+            viewBox="0 0 200 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M99.9346 0C99.9346 2.82498 103.346 9.67429 104.797 9.81055C107.91 9.67423 112.524 7.46423 112.524 6.05176C112.524 7.47781 117.236 9.71922 120.35 9.8125L130.566 8.44043L199.867 9.81738L130.564 11.1934L120.35 9.82129C117.239 9.91229 112.523 12.1537 112.522 13.582C112.522 12.1695 107.905 9.96047 104.792 9.82422C103.339 9.97025 99.9328 16.8111 99.9326 19.6338C99.9324 16.8112 96.5268 9.97099 95.0732 9.82422C91.96 9.96047 87.343 12.1695 87.3428 13.582C87.3425 12.1559 82.6279 9.91212 79.5146 9.82129L69.3008 11.1934L0 9.81738L69.3008 8.44043L79.5176 9.8125C82.6287 9.71925 87.3428 7.48009 87.3428 6.05176C87.3428 7.46422 91.9592 9.67421 95.0703 9.81055C96.5237 9.67202 99.9346 2.82271 99.9346 0ZM101.789 11.5498C101.512 12.0123 101.217 12.5521 100.902 13.1807C100.571 13.8391 100.235 14.5836 99.9326 15.3486C100.237 14.5836 100.573 13.8391 100.902 13.1807C101.007 12.9715 101.109 12.7719 101.21 12.582C101.411 12.2019 101.604 11.8593 101.789 11.5508V11.5498ZM97.8047 11.1133C98.1344 11.6268 98.4912 12.2527 98.8779 13.0146C98.3886 12.0483 97.9452 11.301 97.5459 10.7236L97.8047 11.1133ZM99.9326 4.28516C99.7091 4.84724 99.4681 5.39817 99.2256 5.91211C99.4686 5.39814 99.7108 4.84728 99.9326 4.28516Z"
+              fill="#AF8E45"
+            />
+            <path
+              d="M99.9346 0C99.9346 2.82498 103.346 9.67429 104.797 9.81055C107.91 9.67423 112.524 7.46423 112.524 6.05176C112.524 7.47781 117.236 9.71922 120.35 9.8125L130.566 8.44043L199.867 9.81738L130.564 11.1934L120.35 9.82129C117.239 9.91229 112.523 12.1537 112.522 13.582C112.522 12.1695 107.905 9.96047 104.792 9.82422C103.339 9.97025 99.9328 16.8111 99.9326 19.6338C99.9324 16.8112 96.5268 9.97099 95.0732 9.82422C91.96 9.96047 87.343 12.1695 87.3428 13.582C87.3425 12.1559 82.6279 9.91212 79.5146 9.82129L69.3008 11.1934L0 9.81738L69.3008 8.44043L79.5176 9.8125C82.6287 9.71925 87.3428 7.48009 87.3428 6.05176C87.3428 7.46422 91.9592 9.67421 95.0703 9.81055C96.5237 9.67202 99.9346 2.82271 99.9346 0ZM101.789 11.5498C101.512 12.0123 101.217 12.5521 100.902 13.1807C100.571 13.8391 100.235 14.5836 99.9326 15.3486C100.237 14.5836 100.573 13.8391 100.902 13.1807C101.007 12.9715 101.109 12.7719 101.21 12.582C101.411 12.2019 101.604 11.8593 101.789 11.5508V11.5498ZM97.8047 11.1133C98.1344 11.6268 98.4912 12.2527 98.8779 13.0146C98.3886 12.0483 97.9452 11.301 97.5459 10.7236L97.8047 11.1133ZM99.9326 4.28516C99.7091 4.84724 99.4681 5.39817 99.2256 5.91211C99.4686 5.39814 99.7108 4.84728 99.9326 4.28516Z"
+              fill="black"
+              fill-opacity="0.2"
+            />
+          </svg>
+        </div>
       </div>
 
       <!-- Video -->
 
-      <div class="mx-auto mt-12 max-w-5xl">
+      <div class="mt-5">
         <div
           class="relative aspect-video overflow-hidden rounded-[28px] border-[6px] border-[#AF8E45] bg-[#E8F3EF]"
         >
