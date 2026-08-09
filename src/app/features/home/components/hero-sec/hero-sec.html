@@ -1,12 +1,12 @@
 <div
-  class="w-full h-[35px] bg-[#F2F7F6] flex justify-center items-center shadow-[0_1px_3px_rgba(0,0,0,0.05)]"
+  class="w-full h-[clamp(28px,2.2vw,35px)] bg-[#F2F7F6] flex justify-center items-center shadow-[0_1px_3px_rgba(0,0,0,0.05)]"
 >
-  <div class="flex items-center gap-2 text-[#04583E]">
-    <span class="text-[13px] font-medium tracking-[1px]">
+  <div class="flex items-center gap-[clamp(6px,0.5vw,8px)] text-primary">
+    <span class="text-[clamp(11px,0.85vw,13px)] font-medium tracking-[0.06em]">
       Rated 4.9/5 by our students worldwide
     </span>
 
-    <div class="flex gap-[2px] text-[11px] leading-none">
+    <div class="flex gap-[clamp(1px,0.15vw,2px)] text-[clamp(9px,0.7vw,11px)] leading-none">
       <span>★</span>
       <span>★</span>
       <span>★</span>
@@ -16,43 +16,51 @@
   </div>
 </div>
 
+<!-- Hero Section -->
 <section class="relative overflow-hidden">
-  <!-- 🔹 Background -->
-  <div class="absolute">
-    <!-- pattern الخلفية -->
-    <div class="bg-right bg-contain">
-      <img src="./imgs/Shape02Hero.png" class="opacity-80 w-full" alt="bg" />
+  <!-- Background -->
+  <div class="absolute inset-0">
+    <!-- Main Background -->
+    <div class="bg-right -top-[2vw] absolute bg-contain">
+      <img src="./imgs/Shape02Hero.png" class="opacity-80 w-full h-auto" alt="bg" />
     </div>
-    <!-- shape شمال -->
-    <div class="absolute -right-222 -top-25 -rotate-30">
-      <img class="w-full" src="/imgs/Vector.png" alt="bg2" />
+
+    <!-- Shape -->
+    <div class="absolute -right-[18vw] -top-[4vw] -rotate-30">
+      <img class="w-[45vw] max-w-none h-auto" src="/imgs/Vector.png" alt="bg2" />
     </div>
   </div>
 
-  <!-- 🔹 Content -->
+  <!-- Content -->
   <div
-    class="relative z-10 max-w-7xl mx-auto lg:px-20 px-4 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
+    class="relative z-10 w-[90%] max-w-7xl mx-auto py-[clamp(3rem,6vw,5rem)] grid grid-cols-1 lg:grid-cols-2 gap-[clamp(2rem,4vw,2.5rem)] items-center"
   >
     <!-- Left -->
     <div class="text-center lg:text-left">
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
-        Start Learning Quran <br class="lg:hidden" />
-        Online with Certified <br class="block" />
+      <h1 class="text-[clamp(1.875rem,4vw,3rem)] font-bold leading-tight text-gray-900">
+        Start Learning Quran
+        <br class="lg:hidden" />
+
+        Online with Certified
+        <br class="block" />
+
         <span class="text-marks"> Al-Azhar</span> Tutors
       </h1>
 
-      <p class="mt-4 hidden lg:block lg:mt-6 text-base lg:text-lg text-gray-600">
+      <p
+        class="mt-4 hidden lg:block lg:mt-[clamp(1rem,2vw,1.5rem)] text-[clamp(1rem,1.3vw,1.125rem)] text-gray-600"
+      >
         Trusted by Students
-        <span class="text-marks font-semibold">Worldwide</span>
+        <span class="text-marks font-semibold"> Worldwide </span>
       </p>
 
       <!-- Buttons -->
       <div
-        class="flex flex-col-reverse sm:flex-row items-center justify-center lg:justify-start gap-4 mt-6 lg:mt-8"
+        class="flex flex-col-reverse sm:flex-row items-center justify-center lg:justify-start gap-[clamp(0.75rem,1.5vw,1rem)] mt-[clamp(1.25rem,2.5vw,2rem)]"
       >
         <!-- Play -->
         <div
-          class="w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-primary text-white cursor-pointer"
+          class="w-[clamp(3rem,4vw,3.5rem)] aspect-square flex items-center justify-center rounded-full bg-primary text-white cursor-pointer shrink-0"
         >
           <i class="fa fa-play"></i>
         </div>
@@ -60,21 +68,25 @@
         <!-- Explore -->
         <button
           routerLink="/Courses"
-          class="w-full sm:w-auto border-2 border-primary text-primary px-6 py-2 rounded-[12px_20px_10px_20px] font-medium hover:bg-primary hover:text-white transition"
+          class="w-full sm:w-auto border-2 border-primary text-primary px-[clamp(1.25rem,2vw,1.5rem)] py-[clamp(0.45rem,0.7vw,0.5rem)] rounded-[12px_20px_10px_20px] font-medium hover:bg-primary hover:text-white transition"
         >
           Explore Courses
         </button>
 
         <!-- CTA -->
         <button
-          class="w-full sm:w-auto bg-secondary text-white px-6 py-2 rounded-[12px_20px_10px_20px] font-medium hover:opacity-90 transition"
+          class="w-full sm:w-auto bg-secondary text-white px-[clamp(1.25rem,2vw,1.5rem)] py-[clamp(0.45rem,0.7vw,0.5rem)] rounded-[12px_20px_10px_20px] font-medium hover:opacity-90 transition"
         >
           Get Free Trial
         </button>
       </div>
-      <p class="mt-4 sm:block lg:hidden lg:mt-6 pb-0 mb-0 text-base lg:text-lg text-gray-600">
+
+      <!-- Mobile Trusted Text -->
+      <p
+        class="mt-4 sm:block lg:hidden lg:mt-6 pb-0 mb-0 text-[clamp(1rem,1.3vw,1.125rem)] text-gray-600"
+      >
         Trusted by Students
-        <span class="text-marks font-semibold">Worldwide</span>
+        <span class="text-marks font-semibold"> Worldwide </span>
       </p>
     </div>
 
@@ -113,48 +125,61 @@
     </div>
   </div>
 
+  <!-- Features Section -->
   <section
-    class="relative py-24 px-6 min-h-160 flex items-center bg-cover bg-center bg-no-repeat lg:bg-[url('/imgs/Union.png')] bg-[url('/imgs/Union1.png')]"
+    class="relative px-[5%] py-[clamp(4rem,10vw,6rem)] min-h-[clamp(450px,30vw,560px)] flex items-center bg-center bg-no-repeat bg-[length:100%_100%] lg:bg-[url('/imgs/Union.png')] bg-[url('/imgs/Union1.png')]"
   >
     <div
-      class="max-w-7xl mx-auto py-8 lg:py-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center text-white"
+      class="w-[90%] max-w-7xl mx-auto py-[clamp(1.5rem,3vw,2rem)] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[clamp(2rem,4vw,2.5rem)] text-center text-white"
     >
-      <!-- Card -->
+      <!-- Card 1 -->
       <div class="flex flex-col items-center group">
         <div
-          class="bg-white w-20 h-20 lg:w-24 lg:h-24 mb-6 flex items-center justify-center transition-transform group-hover:scale-110 duration-300 rounded-[40%_60%_70%_30%/40%_50%_60%_50%]"
+          class="bg-white w-[clamp(5rem,8vw,6rem)] aspect-square mb-[clamp(1rem,2vw,1.5rem)] flex items-center justify-center transition-transform group-hover:scale-110 duration-300 rounded-[40%_60%_70%_30%/40%_50%_60%_50%]"
         >
-          <i class="fas fa-graduation-cap text-2xl lg:text-3xl text-marks"></i>
+          <i class="fas fa-graduation-cap text-[clamp(1.5rem,2.5vw,1.875rem)] text-marks"></i>
         </div>
-        <h3 class="text-xl lg:text-2xl font-medium mb-3">Certified Tutors</h3>
-        <p class="text-gray-200 text-sm lg:text-base leading-relaxed max-w-xs">
+
+        <h3 class="text-[clamp(1.25rem,2vw,1.5rem)] font-medium mb-[clamp(0.5rem,1vw,0.75rem)]">
+          Certified Tutors
+        </h3>
+
+        <p class="text-gray-200 text-[clamp(0.875rem,1.2vw,1rem)] leading-relaxed max-w-xs">
           A selection of male and female teachers from Al-Azhar with extensive experience in online
           Quran teaching
         </p>
       </div>
 
-      <!-- Card -->
+      <!-- Card 2 -->
       <div class="flex flex-col items-center group">
         <div
-          class="bg-white w-20 h-20 lg:w-24 lg:h-24 mb-6 flex items-center justify-center transition-transform group-hover:scale-110 duration-300 rounded-[50%_50%_30%_70%/60%_40%_60%_40%]"
+          class="bg-white w-[clamp(5rem,8vw,6rem)] aspect-square mb-[clamp(1rem,2vw,1.5rem)] flex items-center justify-center transition-transform group-hover:scale-110 duration-300 rounded-[50%_50%_30%_70%/60%_40%_60%_40%]"
         >
-          <i class="fas fa-user text-2xl lg:text-3xl text-marks"></i>
+          <i class="fas fa-user text-[clamp(1.5rem,2.5vw,1.875rem)] text-marks"></i>
         </div>
-        <h3 class="text-xl lg:text-2xl font-medium mb-3">One-on-One Classes</h3>
-        <p class="text-gray-200 text-sm lg:text-base leading-relaxed max-w-xs">
+
+        <h3 class="text-[clamp(1.25rem,2vw,1.5rem)] font-medium mb-[clamp(0.5rem,1vw,0.75rem)]">
+          One-on-One Classes
+        </h3>
+
+        <p class="text-gray-200 text-[clamp(0.875rem,1.2vw,1rem)] leading-relaxed max-w-xs">
           Full focus on the student to ensure maximum benefit and immediate correction of mistakes.
         </p>
       </div>
 
-      <!-- Card -->
+      <!-- Card 3 -->
       <div class="flex flex-col items-center group">
         <div
-          class="bg-white w-20 h-20 lg:w-24 lg:h-24 mb-6 flex items-center justify-center transition-transform group-hover:scale-110 duration-300 rounded-[60%_40%_50%_50%/40%_60%_40%_60%]"
+          class="bg-white w-[clamp(5rem,8vw,6rem)] aspect-square mb-[clamp(1rem,2vw,1.5rem)] flex items-center justify-center transition-transform group-hover:scale-110 duration-300 rounded-[60%_40%_50%_50%/40%_60%_40%_60%]"
         >
-          <i class="fa fa-clock text-2xl lg:text-3xl text-marks"></i>
+          <i class="fa fa-clock text-[clamp(1.5rem,2.5vw,1.875rem)] text-marks"></i>
         </div>
-        <h3 class="text-xl lg:text-2xl font-medium mb-3">Flexible Scheduling</h3>
-        <p class="text-gray-200 text-sm lg:text-base leading-relaxed max-w-xs">
+
+        <h3 class="text-[clamp(1.25rem,2vw,1.5rem)] font-medium mb-[clamp(0.5rem,1vw,0.75rem)]">
+          Flexible Scheduling
+        </h3>
+
+        <p class="text-gray-200 text-[clamp(0.875rem,1.2vw,1rem)] leading-relaxed max-w-xs">
           Choose the times that suit you throughout the day and week to fit your schedule.
         </p>
       </div>

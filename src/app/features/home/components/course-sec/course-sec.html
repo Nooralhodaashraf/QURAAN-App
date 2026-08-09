@@ -1,8 +1,17 @@
-<section class="py-50 relative overflow-hidden">
-  <div class="absolute md:-top-2.5 pt-6 md:left-[30%] right--[5%] -top-5">
+<section class="relative w-full pt-[40%] py-[8%] lg:py-[5%]">
+  <!-- Decorative / Children SVG -->
+  <div
+    class="absolute z-20 top-[-25px] left-1/2 -translate-x-1/2 lg:top-[-40px] lg:w-[408px] md:top-15 w-[85%] max-w-[408px] md:w-[55%] h-auto"
+  >
     <svg
       width="408"
       height="351"
+      viewBox="0 0 408 351"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      class="w-full h-auto"
+      class="w-full h-auto block"
       viewBox="0 0 408 351"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -26,12 +35,15 @@
       </defs>
     </svg>
   </div>
-
+  <!-- Main Background -->
   <div
-    class="lg:bg-[url('/imgs/ShabeBG.png')] bg-[url('/imgs/Union2.png')] bg-no-repeat bg-cover bg-center py-45 lg:py-75.5"
+    class="relative w-full bg-[url('/imgs/Union2.png')] pt-[25%] pb-[8%] lg:pt-[18%] lg:pb-[6%] lg:bg-[url('/imgs/ShabeBG.png')] bg-no-repeat bg-[length:100%_auto] bg-top py-[35%] sm:py-[28%] md:py-[20%] lg:py-[10%]"
   >
-    <div class="lg:py-15 py-0 flex flex-col lg:flex-row gap-x-3 items-center justify-center">
-      <div class="hidden lg:block">
+    <!-- Popular Courses Heading -->
+    <div
+      class="w-full flex flex-col lg:flex-row items-center justify-center relative z-10 gap-x-[1.5%] py-[4%] lg:py-[2%] px-[5%]"
+    >
+      <div class="hidden lg:block w-[20%] max-w-[200px]">
         <svg
           width="200"
           height="20"
@@ -50,9 +62,11 @@
           />
         </svg>
       </div>
-      <h2 class="font-semibold lg:text-[36px] text-2xl text-center">
+
+      <h2 class="font-semibold text-2xl lg:text-[36px] text-center whitespace-nowrap">
         Popular Courses for Children
       </h2>
+
       <svg
         width="200"
         height="20"
@@ -71,117 +85,125 @@
         />
       </svg>
     </div>
-    <div class="grid grid-cols-1 gap-5 lg:grid-cols-3 py-7 px-[50px]">
-      @if (courseList.length > 0) {
-        @for (course of courseList; track course.id) {
-          <div class="flex items-center justify-center">
-            <!-- الكارد الرئيسية -->
-            <div
-              class="max-w-sm w-full bg-white min-h-133 shadow-2xl rounded-[80px_20px_80px_20px] py-8 px-6 flex lg:py-8 lg:px-5 flex-col items-center text-center"
-            >
-              <!-- منطقة الهيدر (التصميم الهندسي) -->
-              <div
-                class="relative w-full h-75 rounded-[34.53px_10.62px_34.53px_10.62px] overflow-hidden mb-6 bg-[url('/imgs/Pic.png')] py-28 bg-cover bg-center bg-no-repeat"
-              >
-                <div
-                  class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-20 mx-4 rounded-3xl flex flex-col items-center justify-center z-10"
-                >
-                  <h2 class="text-[#1a1c2e] font-bold text-xl leading-tight"></h2>
-                  <span class="text-marks font-medium uppercase tracking-wider text-sm">{{
-                    course.title.rendered
-                  }}</span>
-                </div>
-              </div>
 
-              <!-- النصوص -->
-              <div class="space-y-3 mb-8">
-                <p class="text-gray-700 text-lg leading-relaxed px-4">
-                  {{ course.yoast_head_json.description.split(' ').slice(0, 10).join(' ') + '...' }}
-                </p>
-              </div>
-
-              <!-- زر الاستدعاء (CTA) -->
-              <button
-                class="w-full bg-[#5cb85c] hover:bg-[#337c33] text-white rounded-[40px_10px_40px_10px] font-semibold py-5 px-12 text-xl transition-colors duration-300 shadow-lg"
-              >
-                Start Free Trial
-              </button>
-            </div>
-          </div>
-        }
-      } @else {
-        <div
-          class="w-full lg:col-span-3 max-w-5xl mx-auto p-[6px] rounded-[40px] bg-gradient-to-br from-[#D4A63E] via-[#B78C32] to-pritext-primary shadow-2xl"
-        >
+    <!-- Popular Courses Content -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 overflow-hidden gap-[2%] py-[3%] px-[5%]">
+      <!-- @if (courseList.length > 0) { -->
+      @for (course of courseList; track course.id) {
+        <!-- Course Card -->
+        <div class="w-full flex items-center justify-center px-[3%]">
           <div
-            class="relative bg-white rounded-[34px] min-h-[420px] flex flex-col items-center justify-center text-center px-6 py-12"
+            class="w-full max-w-[420px] min-h-[520px] bg-white shadow-2xl rounded-[80px_20px_80px_20px] py-[7%] px-[6%] flex flex-col items-center text-center"
           >
-            <!-- Icon -->
-            <div class="w-28 h-28 rounded-full bg-[#EEF7F4] flex items-center justify-center mb-8">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-14 h-14 text-primary"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
+            <!-- Header / Image -->
+            <div
+              class="relative w-full h-[230px] lg:h-[250px] rounded-[34px_10px_34px_10px] overflow-hidden mb-[6%] bg-[url('/imgs/Pic.png')] bg-cover bg-center bg-no-repeat"
+            >
+              <div
+                class="absolute inset-x-[5%] top-1/2 -translate-y-1/2 h-[30%] rounded-3xl flex flex-col items-center justify-center z-10"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M8.111 16.404a7 7 0 017.778-9.808M5.636 12.879A10.959 10.959 0 013 12c0-2.761 1.12-5.261 2.929-7.071M15 9l6 6m0-6l-6 6"
-                />
-              </svg>
-            </div>
+                <h2 class="text-[#1a1c2e] font-bold text-xl leading-tight"></h2>
 
-            <!-- Title -->
-            <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-4">
-              Please Check Your Network
-            </h2>
+                <span class="text-marks font-medium uppercase tracking-wider text-sm">
+                  {{ course.title.rendered }}
+                </span>
+              </div>
+            </div>
 
             <!-- Description -->
-            <p class="px-5 text-gray-500 text-lg leading-8">
-              <span class="hidden lg:block"> We couldn't load the content right now.</span>
-              <br />
-              Please make sure your internet connection is working and try again.
-            </p>
-
-            <!-- Divider -->
-            <div class="flex items-center gap-4 my-10">
-              <svg
-                width="200"
-                height="20"
-                viewBox="0 0 200 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M99.9346 0C99.9346 2.82498 103.346 9.67429 104.797 9.81055C107.91 9.67423 112.524 7.46423 112.524 6.05176C112.524 7.47781 117.236 9.71922 120.35 9.8125L130.566 8.44043L199.867 9.81738L130.564 11.1934L120.35 9.82129C117.239 9.91229 112.523 12.1537 112.522 13.582C112.522 12.1695 107.905 9.96047 104.792 9.82422C103.339 9.97025 99.9328 16.8111 99.9326 19.6338C99.9324 16.8112 96.5268 9.97099 95.0732 9.82422C91.96 9.96047 87.343 12.1695 87.3428 13.582C87.3425 12.1559 82.6279 9.91212 79.5146 9.82129L69.3008 11.1934L0 9.81738L69.3008 8.44043L79.5176 9.8125C82.6287 9.71925 87.3428 7.48009 87.3428 6.05176C87.3428 7.46422 91.9592 9.67421 95.0703 9.81055C96.5237 9.67202 99.9346 2.82271 99.9346 0ZM101.789 11.5498C101.512 12.0123 101.217 12.5521 100.902 13.1807C100.571 13.8391 100.235 14.5836 99.9326 15.3486C100.237 14.5836 100.573 13.8391 100.902 13.1807C101.007 12.9715 101.109 12.7719 101.21 12.582C101.411 12.2019 101.604 11.8593 101.789 11.5508V11.5498ZM97.8047 11.1133C98.1344 11.6268 98.4912 12.2527 98.8779 13.0146C98.3886 12.0483 97.9452 11.301 97.5459 10.7236L97.8047 11.1133ZM99.9326 4.28516C99.7091 4.84724 99.4681 5.39817 99.2256 5.91211C99.4686 5.39814 99.7108 4.84728 99.9326 4.28516Z"
-                  fill="#AF8E45"
-                />
-                <path
-                  d="M99.9346 0C99.9346 2.82498 103.346 9.67429 104.797 9.81055C107.91 9.67423 112.524 7.46423 112.524 6.05176C112.524 7.47781 117.236 9.71922 120.35 9.8125L130.566 8.44043L199.867 9.81738L130.564 11.1934L120.35 9.82129C117.239 9.91229 112.523 12.1537 112.522 13.582C112.522 12.1695 107.905 9.96047 104.792 9.82422C103.339 9.97025 99.9328 16.8111 99.9326 19.6338C99.9324 16.8112 96.5268 9.97099 95.0732 9.82422C91.96 9.96047 87.343 12.1695 87.3428 13.582C87.3425 12.1559 82.6279 9.91212 79.5146 9.82129L69.3008 11.1934L0 9.81738L69.3008 8.44043L79.5176 9.8125C82.6287 9.71925 87.3428 7.48009 87.3428 6.05176C87.3428 7.46422 91.9592 9.67421 95.0703 9.81055C96.5237 9.67202 99.9346 2.82271 99.9346 0ZM101.789 11.5498C101.512 12.0123 101.217 12.5521 100.902 13.1807C100.571 13.8391 100.235 14.5836 99.9326 15.3486C100.237 14.5836 100.573 13.8391 100.902 13.1807C101.007 12.9715 101.109 12.7719 101.21 12.582C101.411 12.2019 101.604 11.8593 101.789 11.5508V11.5498ZM97.8047 11.1133C98.1344 11.6268 98.4912 12.2527 98.8779 13.0146C98.3886 12.0483 97.9452 11.301 97.5459 10.7236L97.8047 11.1133ZM99.9326 4.28516C99.7091 4.84724 99.4681 5.39817 99.2256 5.91211C99.4686 5.39814 99.7108 4.84728 99.9326 4.28516Z"
-                  fill="black"
-                  fill-opacity="0.2"
-                />
-              </svg>
+            <div class="w-full space-y-[3%] mb-[7%]">
+              <p class="w-full text-gray-700 text-base lg:text-lg leading-relaxed px-[3%]">
+                {{ course.yoast_head_json.description.split(' ').slice(0, 10).join(' ') + '...' }}
+              </p>
             </div>
 
-            <!-- Retry Button -->
+            <!-- CTA -->
             <button
-              (click)="reload()"
-              class="px-10 py-3 rounded-[20px_8px] bg-secondary hover:bg-[#219653] transition text-white font-semibold"
+              class="w-full bg-[#5cb85c] hover:bg-[#337c33] text-white rounded-[40px_10px_40px_10px] font-semibold py-[5%] px-[8%] text-lg lg:text-xl transition-colors duration-300 shadow-lg"
             >
-              Try Again
+              Start Free Trial
             </button>
           </div>
         </div>
       }
+      <!--! } @else {   الكود طلع بيرجع فعلا حاجة بس طول م الصفحة دي ظهرت م بتطلعش محتاجة تتهندل مع الApi-->
+
+      <!-- Network Error Card -->
+      <!-- <div class="w-full lg:col-span-3 px-[3%] flex justify-center">
+          <div
+            class="w-full max-w-5xl p-[0.5%] rounded-[40px] bg-gradient-to-br from-[#D4A63E] via-[#B78C32] to-pritext-primary shadow-2xl"
+          >
+            <div
+              class="relative w-full min-h-[420px] bg-white rounded-[34px] flex flex-col items-center justify-center text-center px-[5%] py-[8%]"
+            >
+              <!-- Icon -->
+      <!-- <div
+                class="w-[112px] h-[112px] rounded-full bg-[#EEF7F4] flex items-center justify-center mb-[6%]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-[50%] h-[50%] text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.111 16.404a7 7 0 017.778-9.808M5.636 12.879A10.959 10.959 0 013 12c0-2.761 1.12-5.261 2.929-7.071M15 9l6 6m0-6l-6 6"
+                  />
+                </svg>
+              </div> -->
+
+      <!-- Title -->
+      <!-- <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-[2%]">
+                Please Check Your Network
+              </h2> -->
+
+      <!-- Description -->
+      <!-- <p class="w-full max-w-2xl px-[3%] text-gray-500 text-base lg:text-lg leading-8">
+                <span class="hidden lg:block"> We couldn't load the content right now. </span>
+
+                <br />
+
+                Please make sure your internet connection is working and try again.
+              </p> -->
+
+      <!-- Divider -->
+      <!-- <div class="flex items-center justify-center gap-[2%] my-[5%] w-full">
+                <svg
+                  width="200"
+                  height="20"
+                  viewBox="0 0 200 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-[35%] max-w-[200px] h-auto"
+                > -->
+      <!-- نفس الـ SVG بتاعك -->
+      <!-- </svg>
+              </div> -->
+
+      <!-- Retry Button -->
+      <!-- <button
+                (click)="reload()"
+                class="px-[10%] py-[3%] rounded-[20px_8px] bg-secondary hover:bg-[#219653] transition text-white font-semibold text-base lg:text-lg"
+              >
+                Try Again
+              </button>
+            </div>
+          </div> -->
+      <!-- </div> -->
+      <!-- } -->
     </div>
-    <!-- !swipper -->
-    <div>
-      <div class="lg:py-15 py-0 flex flex-col lg:flex-row gap-x-3 items-center justify-center">
-        <div class="hidden lg:block">
+
+    <!-- Featured Courses -->
+    <div class="w-full">
+      <!-- Featured Courses Heading -->
+      <div
+        class="w-full flex flex-col lg:flex-row items-center justify-center gap-x-[1.5%] py-[4%] lg:py-[2%] px-[5%]"
+      >
+        <div class="hidden lg:block w-[20%] max-w-[200px]">
           <svg
             width="200"
             height="20"
@@ -200,9 +222,11 @@
             />
           </svg>
         </div>
-        <h2 class="font-semibold lg:text-[36px] text-2xl text-center tex-[18px]">
+
+        <h2 class="font-semibold text-2xl lg:text-[36px] text-center whitespace-nowrap">
           Featured Courses
         </h2>
+
         <svg
           width="200"
           height="20"
@@ -221,40 +245,43 @@
           />
         </svg>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-3 p-[50px]">
+
+      <!-- Featured Courses Content -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 overflow-hidden gap-[2%] py-[3%] px-[5%]">
         @if (courseList.length > 0) {
           @for (course of courseList; track course.id) {
-            <div class="flex items-center justify-center">
-              <!-- الكارد الرئيسية -->
+            <!-- Course Card -->
+            <div class="w-full flex items-center justify-center px-[3%]">
               <div
-                class="max-w-sm w-full bg-white min-h-133 shadow-2xl rounded-[80px_20px_80px_20px] py-8 px-6 flex lg:py-8 lg:px-5 flex-col items-center text-center"
+                class="w-full max-w-[420px] min-h-[520px] bg-white shadow-2xl rounded-[80px_20px_80px_20px] py-[7%] px-[6%] flex flex-col items-center text-center"
               >
-                <!-- منطقة الهيدر (التصميم الهندسي) -->
+                <!-- Header / Image -->
                 <div
-                  class="relative w-full h-75 rounded-[34.53px_10.62px_34.53px_10.62px] overflow-hidden mb-6 bg-[url('/imgs/Pic.png')] py-28 bg-cover bg-center bg-no-repeat"
+                  class="relative w-full h-[230px] lg:h-[250px] rounded-[34px_10px_34px_10px] overflow-hidden mb-[6%] bg-[url('/imgs/Pic.png')] bg-cover bg-center bg-no-repeat"
                 >
                   <div
-                    class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-20 mx-4 rounded-3xl flex flex-col items-center justify-center z-10"
+                    class="absolute inset-x-[5%] top-1/2 -translate-y-1/2 h-[30%] rounded-3xl flex flex-col items-center justify-center z-10"
                   >
                     <h2 class="text-[#1a1c2e] font-bold text-xl leading-tight"></h2>
-                    <span class="text-marks font-medium uppercase tracking-wider text-sm">{{
-                      course.title.rendered
-                    }}</span>
+
+                    <span class="text-marks font-medium uppercase tracking-wider text-sm">
+                      {{ course.title.rendered }}
+                    </span>
                   </div>
                 </div>
 
-                <!-- النصوص -->
-                <div class="space-y-3 mb-8">
-                  <p class="text-gray-700 text-lg leading-relaxed px-4">
+                <!-- Description -->
+                <div class="w-full space-y-[3%] mb-[7%]">
+                  <p class="w-full text-gray-700 text-base lg:text-lg leading-relaxed px-[3%]">
                     {{
                       course.yoast_head_json.description.split(' ').slice(0, 10).join(' ') + '...'
                     }}
                   </p>
                 </div>
 
-                <!-- زر الاستدعاء (CTA) -->
+                <!-- CTA -->
                 <button
-                  class="w-full bg-[#5cb85c] hover:bg-[#337c33] text-white rounded-[40px_10px_40px_10px] font-semibold py-5 px-12 text-xl transition-colors duration-300 shadow-lg"
+                  class="w-full bg-[#5cb85c] hover:bg-[#337c33] text-white rounded-[40px_10px_40px_10px] font-semibold py-[5%] px-[8%] text-lg lg:text-xl transition-colors duration-300 shadow-lg"
                 >
                   Start Free Trial
                 </button>
@@ -262,72 +289,72 @@
             </div>
           }
         } @else {
-          <div
-            class="w-full col-span-3 max-w-5xl mx-auto p-[6px] rounded-[40px] bg-gradient-to-br from-[#D4A63E] via-[#B78C32] to-pritext-primary shadow-2xl"
-          >
+          <!-- الكود طلع بيرجع فعلا حاجة بس طول م الصفحة دي ظهرت م بتطلعش محتاجة تتهندل مع الApi -->
+
+          <!-- Network Error Card -->
+          <div class="w-full lg:col-span-3 px-[3%] flex justify-center">
             <div
-              class="relative bg-white rounded-[34px] min-h-[420px] flex flex-col items-center justify-center text-center px-6 py-12"
+              class="w-full max-w-5xl p-[0.5%] rounded-[40px] bg-gradient-to-br from-[#D4A63E] via-[#B78C32] to-pritext-primary shadow-2xl"
             >
-              <!-- Icon -->
               <div
-                class="w-28 h-28 rounded-full bg-[#EEF7F4] flex items-center justify-center mb-8"
+                class="relative w-full min-h-[420px] bg-white rounded-[34px] flex flex-col items-center justify-center text-center px-[5%] py-[8%]"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-14 h-14 text-primary"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
+                <!-- Icon -->
+                <div
+                  class="w-[112px] h-[112px] rounded-full bg-[#EEF7F4] flex items-center justify-center mb-[6%]"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M8.111 16.404a7 7 0 017.778-9.808M5.636 12.879A10.959 10.959 0 013 12c0-2.761 1.12-5.261 2.929-7.071M15 9l6 6m0-6l-6 6"
-                  />
-                </svg>
-              </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-[50%] h-[50%] text-primary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.111 16.404a7 7 0 017.778-9.808M5.636 12.879A10.959 10.959 0 013 12c0-2.761 1.12-5.261 2.929-7.071M15 9l6 6m0-6l-6 6"
+                    />
+                  </svg>
+                </div>
 
-              <!-- Title -->
-              <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-4">
-                Please Check Your Network
-              </h2>
+                <!-- Title -->
+                <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-[2%]">
+                  Please Check Your Network
+                </h2>
 
-              <!-- Description -->
-              <p class="px-5 text-gray-500 text-lg leading-8">
-                <span class="hidden lg:block"> We couldn't load the content right now.</span>
-                <br />
-                Please make sure your internet connection is working and try again.
-              </p>
+                <!-- Description -->
+                <p class="w-full max-w-2xl px-[3%] text-gray-500 text-base lg:text-lg leading-8">
+                  <span class="hidden lg:block"> We couldn't load the content right now. </span>
 
-              <!-- Divider -->
-              <div class="flex items-center gap-4 my-10">
-                <svg
-                  width="200"
-                  height="20"
-                  viewBox="0 0 200 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                  <br />
+
+                  Please make sure your internet connection is working and try again.
+                </p>
+
+                <!-- Divider -->
+                <div class="flex items-center justify-center gap-[2%] my-[5%] w-full">
+                  <svg
+                    width="200"
+                    height="20"
+                    viewBox="0 0 200 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-[35%] max-w-[200px] h-auto"
+                  >
+                    <!-- نفس الـ SVG بتاعك -->
+                  </svg>
+                </div>
+
+                <!-- Retry Button -->
+                <button
+                  (click)="reload()"
+                  class="px-[10%] py-[3%] rounded-[20px_8px] bg-secondary hover:bg-[#219653] transition text-white font-semibold text-base lg:text-lg"
                 >
-                  <path
-                    d="M99.9346 0C99.9346 2.82498 103.346 9.67429 104.797 9.81055C107.91 9.67423 112.524 7.46423 112.524 6.05176C112.524 7.47781 117.236 9.71922 120.35 9.8125L130.566 8.44043L199.867 9.81738L130.564 11.1934L120.35 9.82129C117.239 9.91229 112.523 12.1537 112.522 13.582C112.522 12.1695 107.905 9.96047 104.792 9.82422C103.339 9.97025 99.9328 16.8111 99.9326 19.6338C99.9324 16.8112 96.5268 9.97099 95.0732 9.82422C91.96 9.96047 87.343 12.1695 87.3428 13.582C87.3425 12.1559 82.6279 9.91212 79.5146 9.82129L69.3008 11.1934L0 9.81738L69.3008 8.44043L79.5176 9.8125C82.6287 9.71925 87.3428 7.48009 87.3428 6.05176C87.3428 7.46422 91.9592 9.67421 95.0703 9.81055C96.5237 9.67202 99.9346 2.82271 99.9346 0ZM101.789 11.5498C101.512 12.0123 101.217 12.5521 100.902 13.1807C100.571 13.8391 100.235 14.5836 99.9326 15.3486C100.237 14.5836 100.573 13.8391 100.902 13.1807C101.007 12.9715 101.109 12.7719 101.21 12.582C101.411 12.2019 101.604 11.8593 101.789 11.5508V11.5498ZM97.8047 11.1133C98.1344 11.6268 98.4912 12.2527 98.8779 13.0146C98.3886 12.0483 97.9452 11.301 97.5459 10.7236L97.8047 11.1133ZM99.9326 4.28516C99.7091 4.84724 99.4681 5.39817 99.2256 5.91211C99.4686 5.39814 99.7108 4.84728 99.9326 4.28516Z"
-                    fill="#AF8E45"
-                  />
-                  <path
-                    d="M99.9346 0C99.9346 2.82498 103.346 9.67429 104.797 9.81055C107.91 9.67423 112.524 7.46423 112.524 6.05176C112.524 7.47781 117.236 9.71922 120.35 9.8125L130.566 8.44043L199.867 9.81738L130.564 11.1934L120.35 9.82129C117.239 9.91229 112.523 12.1537 112.522 13.582C112.522 12.1695 107.905 9.96047 104.792 9.82422C103.339 9.97025 99.9328 16.8111 99.9326 19.6338C99.9324 16.8112 96.5268 9.97099 95.0732 9.82422C91.96 9.96047 87.343 12.1695 87.3428 13.582C87.3425 12.1559 82.6279 9.91212 79.5146 9.82129L69.3008 11.1934L0 9.81738L69.3008 8.44043L79.5176 9.8125C82.6287 9.71925 87.3428 7.48009 87.3428 6.05176C87.3428 7.46422 91.9592 9.67421 95.0703 9.81055C96.5237 9.67202 99.9346 2.82271 99.9346 0ZM101.789 11.5498C101.512 12.0123 101.217 12.5521 100.902 13.1807C100.571 13.8391 100.235 14.5836 99.9326 15.3486C100.237 14.5836 100.573 13.8391 100.902 13.1807C101.007 12.9715 101.109 12.7719 101.21 12.582C101.411 12.2019 101.604 11.8593 101.789 11.5508V11.5498ZM97.8047 11.1133C98.1344 11.6268 98.4912 12.2527 98.8779 13.0146C98.3886 12.0483 97.9452 11.301 97.5459 10.7236L97.8047 11.1133ZM99.9326 4.28516C99.7091 4.84724 99.4681 5.39817 99.2256 5.91211C99.4686 5.39814 99.7108 4.84728 99.9326 4.28516Z"
-                    fill="black"
-                    fill-opacity="0.2"
-                  />
-                </svg>
+                  Try Again
+                </button>
               </div>
-
-              <!-- Retry Button -->
-              <button
-                (click)="reload()"
-                class="px-10 py-3 rounded-[20px_8px] bg-secondary hover:bg-[#219653] transition text-white font-semibold"
-              >
-                Try Again
-              </button>
             </div>
           </div>
         }
