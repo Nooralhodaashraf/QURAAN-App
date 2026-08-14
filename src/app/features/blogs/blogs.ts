@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { BlogsHero } from './components/blogs-hero/blogs-hero';
 
 @Component({
   selector: 'app-blogs',
-  imports: [],
+  imports: [BlogsHero],
   templateUrl: './blogs.html',
   styleUrl: './blogs.css',
 })
