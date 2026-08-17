@@ -37,6 +37,7 @@
       <div class="hidden md:flex items-center gap-10 font-medium text-gray-700">
         <a
           routerLink="home"
+          (click)="closeMenu()"
           routerLinkActive="text-primary font-semibold cursor-pointer "
           class="hover:text-primary cursor-pointer transition"
         >
@@ -45,24 +46,28 @@
 
         <a
           routerLink="AboutUs"
+          (click)="closeMenu()"
           routerLinkActive="text-primary font-semibold cursor-pointer "
           class="hover:text-primary cursor-pointer transition"
           >About US</a
         >
         <a
           routerLink="Courses"
+          (click)="closeMenu()"
           routerLinkActive="text-primary font-semibold cursor-pointer "
           class="hover:text-primary cursor-pointer transition"
           >Courses</a
         >
         <a
           routerLink="Blogs"
+          (click)="closeMenu()"
           routerLinkActive="text-primary font-semibold cursor-pointer "
           class="hover:text-primary cursor-pointer transition"
           >Blogs</a
         >
         <a
           routerLink="ContactUs"
+          (click)="closeMenu()"
           routerLinkActive="text-primary font-semibold cursor-pointer "
           class="hover:text-primary cursor-pointer transition"
           >Contact</a
@@ -73,11 +78,10 @@
       <div class="flex items-center gap-3">
         <!-- Button -->
         <button
-          class="bg-secondary text-white font-semibold px-10 py-3 rounded-[24px_8px_24px_8px] shadow-sm hover:shadow-md hover:opacity-90 active:scale-95 transition-all duration-200"
+          class="bg-secondary text-white font-semibold hidden md:block px-10 py-3 rounded-[24px_8px_24px_8px] shadow-sm hover:shadow-md hover:opacity-90 active:scale-95 transition-all duration-200"
         >
           Get Free Trial
         </button>
-
         <!-- Hamburger -->
         <button (click)="toggleMenu()" id="menuBtn" class="md:hidden text-2xl text-primary">
           <i class="fa fa-bars"></i>
@@ -90,34 +94,45 @@
       <div class="flex flex-col gap-4 text-gray-700 font-medium">
         <a
           routerLink="home"
+          (click)="closeMenu()"
           routerLinkActive="text-primary font-semibold cursor-pointer "
           class="text-primary font-semibold"
           >Home</a
         >
         <a
           routerLink="AboutUs"
+          (click)="closeMenu()"
           class="text-primary font-semibold"
           routerLinkActive="text-primary font-semibold cursor-pointer "
           >About US</a
         >
         <a
           routerLink="Courses"
+          (click)="closeMenu()"
           class="text-primary font-semibold"
           routerLinkActive="text-primary font-semibold cursor-pointer "
           >Courses</a
         >
         <a
           routerLink="Blogs"
+          (click)="closeMenu()"
           class="text-primary font-semibold"
           routerLinkActive="text-primary font-semibold cursor-pointer "
           >Blogs</a
         >
         <a
           routerLink="ContactUs"
+          (click)="closeMenu()"
           class="text-primary font-semibold"
           routerLinkActive="text-primary font-semibold cursor-pointer "
           >Contact</a
         >
+
+        <button
+          class="bg-secondary text-white font-semibold px-10 py-3 rounded-[24px_8px_24px_8px] shadow-sm hover:shadow-md hover:opacity-90 active:scale-95 transition-all duration-200"
+        >
+          Get Free Trial
+        </button>
       </div>
     </div>
   </nav>
